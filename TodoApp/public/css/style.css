@@ -1,0 +1,9 @@
+body {
+    padding-bottom: 80px; /* Footer content overlapping preventer */
+}
+.card {
+    border-radius: 10px;
+}
+.table th {
+    font-weight: 600;
+}

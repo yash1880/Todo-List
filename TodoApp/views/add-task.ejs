@@ -1,0 +1,44 @@
+<%- include('partials/header') %>
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow border-0 mt-3">
+            <div class="card-body p-4">
+                <h3 class="text-center mb-4 fw-bold">Create New Task</h3>
+                <form action="/add" method="POST">
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Task Title</label>
+                        <input type="text" class="form-control" name="title" placeholder="What needs to be done?" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Description</label>
+                        <textarea class="form-control" name="description" rows="3" placeholder="Add specific task details..." required></textarea>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label fw-semibold">Priority Level</label>
+                        <select class="form-select" name="priority" required>
+                            <option value="" disabled selected>Select priority...</option>
+                            <option value="High">High</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Low">Low</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label fw-semibold">Current Status</label>
+                        <select class="form-select" name="status" required>
+                            <option value="Pending">Pending</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Completed">Completed</option>
+                        </select>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-success">Save Task</button>
+                        <a href="/" class="btn btn-light border">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('partials/footer') %>
